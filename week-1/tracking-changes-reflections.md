@@ -20,5 +20,5 @@ If you commit some files and decide that you actually want to change the files.
 
 ### What is a pull request and how do you create and merge one?
 A pull request is a way to merge code from a different branch into the master branch. To create one run the command “git push origin [working-branch-name]”, the branch is pushed to the github remote repo. Go to your Github account, and look for the “Compare & Pull request” tab, see the changes between the master and branch, then once you’re ready, click the “Create pull request” button. Once the branch is ready to be merged back to the master, press the “merge pull request” button, then “Confirm merge” and you’re done. Make sure to delete the old branch to come the remote repo clean.
-Why are pull requests preferred when working with teams?
+### Why are pull requests preferred when working with teams?
 So peer reviewers (team members) can easily see the changes you made and compare between the master and branch.
