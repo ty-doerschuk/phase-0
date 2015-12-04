@@ -57,3 +57,48 @@ rm remove file
 
 help Powershell term, but it means apropos or man in Unix for help dialog within the shell
 # Forking and Cloning
+If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+Create a Repo
+
+1. Sign into your github.com account
+
+2. Click the + tab on the top right, select "New Repository"
+
+3. On the "Create a new repository" page, fill in the settings to your new repository. Add your repo name, make it public, and add the "MIT License"
+
+4. Done!
+
+Fork a Repo
+
+1. Find the owner's repo url on github
+
+2. Click the Fork Icon on the top right
+
+3. Fork the the repo to your name
+
+4. Copy the HTTPS link in your forked repo github page
+
+5. Open your Shell App, Terminal for me....
+
+6. Navigate to your directory where you would like to loccally keep the repo, so for me it would be...
+
+ls TO cd Desktop TO cd DBC TO git clone [copied URL]
+
+7. ls to see if all the files match the github page repo
+
+8. Done!
+
+Clone a Repo
+
+1. Sign into your Github account, select your profile tab on the top right and select "Your Profile"
+
+2. Click on the repo link you created earlier
+
+3. You don't need to fork the repo because you already are the owner! So copy the url link
+
+4. Open your Shell App on your computer, follow steps 6 and 7 from "Fork a Repo"
+
+5. Done!
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?
+The only struggle I had was the difference between cloning and forking was not explicitly clear. I had to do some research on the process to clarify. I learned that forks are more for your review and edits, once complete you push it back to the repo's owner, while a clone is your repo for your work and you push it out as required to your team members.
