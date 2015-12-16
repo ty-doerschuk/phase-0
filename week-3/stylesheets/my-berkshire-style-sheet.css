@@ -1,0 +1,88 @@
+html {
+  background-color: #ffffff;
+  color: #000080
+}
+
+h1 {
+  font-size:32px;
+  text-align:center;
+}
+
+h1::first-letter {
+  font-size:60px;
+}
+
+h3 {
+  font-size:18px;
+  text-align:center;
+}
+
+h2 {
+  font-size:24px;
+  text-align:center;
+}
+
+.heading {
+  line-height:40%;
+}
+
+.letters {
+  font-size: 60px;
+}
+
+a:visited {
+  color: #ff0000
+}
+
+a {
+  color: #800080
+}
+
+p {
+  font-size: 10px;
+}
+
+
+.links-left {
+  float: left;
+  width: 33%;
+
+}
+
+.links-right {
+  float: right;
+  width: 50%;
+
+}
+
+
+.footer {
+  clear: both
+
+}
+
+.line-break{
+  height: 1px;
+  background: gray;
+  margin: 10px 10px 10px 10px;
+}
+
+img {
+  margin: 0% 50% 0% 50%;
+}
+
+li {
+  line-height: 200%;
+}
++/
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+The path source of course, without that, no CSS for you!
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it? w3schools.com has been help for a while since I was with my small business. The “Try It Yourself”  feature is a great way to learn before you apply. It’s very tedious to make CSS appear the way you want it. I have been in a battle with CSS for the last two and half years with the maintenance of my small business’s website.
+
+What CSS did you use to modify the element style (like size, color, etc.) The answer is above…
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+We used classes because our CSS is not complex enough to require ids yet. Once we start getting into 2nd and 3rd level branching, ids would be more useful.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why? Well, Berkshire did, but not by much. Our is just messy because of inexperience, but we did follow rules like using correct classes. It looks like Berkshire just coped out and used inline styling for a majority of their HTML. +/
