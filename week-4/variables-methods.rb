@@ -30,3 +30,7 @@ puts "That's nice, but your new favorite number is " + new_number.to_s + "...dea
 
 # What was confusing about this material? What made sense?
 # The details mentioned in how to create method were a bit vague. I forgot that I need to use “return” and not “puts” within my method to complete the challenges. This took up a lot of unnecessary time, however, it was still a learning experience.
+
+# Define method https://github.com/ty-doerschuk/phase-0/blob/master/week-4/define-method/my_solution.rb
+# Address https://github.com/ty-doerschuk/phase-0/blob/master/week-4/address/my_solution.rb
+# Math https://github.com/ty-doerschuk/phase-0/blob/master/week-4/math/my_solution.rb
