@@ -1,35 +1,50 @@
 # Research Methods
 
 # I spent [] hours on this challenge.
-=begin
+
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
-my_family_pets_ages = {"Evi" => 6, "Ditto" => 2, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
+my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  answer = source.select do|x|
+    x = x.to_s
+    x.include? thing_to_find
+  end
+  p answer
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+   answer = []
+   source.select do |k,v|
+    if v == thing_to_find
+      answer << k
+    end
+   end
+   p answer
 end
-=end
+
+my_hash_finding_method(my_family_pets_ages, 3)
+my_array_finding_method(i_want_pets, "t")
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
-=begin
+# - on the array method I used .select and with each string object inside the array, I used .include? .select when used on an array, iterates through the array and selects objects based off of what the block evaluates. the .include? method evaluates a string and issues true or false if the string includes what you specify. In this case, i had to convert all objects into strings so that .include? would work, then whichever strings had a "t" would be evaluated as true, those strings were then selected by .select and stored in the variable answer as an array.
+# - on the hash method, I used .select and << (push). the method .select iterates through a hash, and selects whatever you specify in the code block. the << method pushes an object into an array variable. in this case, i've iterated through the hash using select, and whenever a value equals the thing to find, the corresponding key is pushed into the array. It might seem strange to use select(a method that should select the returned objects) and then push to an array within the iteration, but my reason for doing that is that the desired result is for the keys only to be listed in an array. using .select on a hash returns a hash with both the keys and values, so I decided to use push on just the keys to get the desired output. In my research, I couldn't find a hash method that would iterate and return output as just an array, but if anyone finds a method or some way of doing that, I would be interested in hearing about it.
+# - as far as researching and figuring out how to use methods properly, I find that a quick read of ruby docs and then experimenting in irb is the best way to go. its simple, fast, and just gives immediate feedback of how to write the syntax and what kind of output you will get.
+
 # Person 2
 def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.map! { |word| word.is_a?(Integer) ? word + thing_to_modify : word }
 end
 
 def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each { |key, value| source[key] = value + thing_to_modify }
 end
-=end
+
 # Identify and describe the Ruby method(s) you implemented.
 #
+# The first solution here was the tricky one for me. I struggled a lot with this method as I feel I am somewhat weak on the iteration front, especially when it comes to "selectively iterating". I knew there was some kind of logical statement I had to include to target only integer values in the array but I was unsure how to modify them destructively. I ended up using a destructive method map! combined with a "ternary operator" which was a very new concept for me. This method iterates through the array and for every element in the array, it checks to see if the element is an integer. If the element is an integer, is adds the user input to the "word" (integer element in the array). If the "word" is not an integer, is simply leaves it alone (makes it the "original" word itself.) I found ternary operators very useful in combining a kind of boolean "if" statment with a destructive iteration process.
+
+# My next statment was more straightforward for me. The key (so to speak) here was getting the syntax right for the "add key/value pair to a hash" part of this method. This method iterates over the hash and for every key/value pair, it adds the user input "thing_to_modify" to the existing hash value for every key. It does this by updating every key value pair in the hash and in the process adds the user input to the value of every key/value pair.
 #
 #
 i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
@@ -64,22 +79,36 @@ end
 #   I first like to scan Ruby Docs and see if I can use a method. If I cannot find a method inside Ruby Docs, I then search the process in Google and look for what methods other people are using to help point me in the right direction. I then find a suitable method, I copy and paste it from Ruby docs into the code to make sure I am writing the correct syntax and I plug the data in.
 
 
-=begin
-# Person 4
+
 def my_array_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each do |x|
+    if x.to_s.include?(thing_to_delete)
+      source.delete(x)
+    end
+  end
 end
 
 def my_hash_deletion_method!(source, thing_to_delete)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each do |x, y|
+    if x.include?(thing_to_delete)
+      source.delete(x)
+    end
+  end
 end
 
+
+
+
+
 # Identify and describe the Ruby method(s) you implemented.
-#
-#
-#
 
+#I used .include? and .delete. To check an array for an item you would do array.include?(item). It returns true if item is part of the array.
 
+#I also used delete. The syntax to delete an item from an array is array.delete(item). The delete method is naturally destructive.
+#
+#I didn't really learn any tricks for the docs, sorry guys.
+
+=begin
 # Person 5
 def my_array_splitting_method(source)
   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
