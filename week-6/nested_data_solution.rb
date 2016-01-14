@@ -92,8 +92,13 @@ end
 
 p name_gen(startup_names)
 =begin
-Reflection
 What are some general rules you can apply to nested arrays?
+Never try to rush finding a nested element. The syntax will through you off sometimes, so take your time. Also knowing proper syntax to call index-values and key-values is important too. 
+
 What are some ways you can iterate over nested arrays?
+The first thing is to step back and think, what am I trying to do with the nested values. This will guide you in the types of class methods you will need to use. 
+
 Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
+No new methods, but it was helpful to use the .map! method because we decided it was good for destructing an array. The initial started with .each and ended up using a lot of code to get the answer. The .map! method was a great refactor. 
+
 =end
