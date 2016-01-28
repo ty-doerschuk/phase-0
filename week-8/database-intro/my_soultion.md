@@ -9,7 +9,7 @@
 9. SELECT region_name FROM regions WHERE region_name LIKE '%central%';
 10. SELECT regions.region_name, states.state_name FROM states LEFT JOIN regions ON states.region_id=regions.id ORDER BY region_id ASC;
 
-[Schema Link](/dbc-schema.png)
+[Schema Link](dbc-schema.png)
 
 What are databases for?
 Databases store mass amounts of data information.
