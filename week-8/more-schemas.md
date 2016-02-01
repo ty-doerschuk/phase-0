@@ -2,7 +2,7 @@ My SQL would be for a database of bicycles. The first list would give the basics
 
 [Bicycle Catalog](dbc-851.png)
 
-[Grocery List](dbc-862.png)
+[Grocery List](dbc-852.png)
 
 What is a one-to-one database?
 A one-to-one database is when two things have a single relationship to each other.
