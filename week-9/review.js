@@ -9,7 +9,7 @@ PROMT user for 'how many'
 
 call function to add to empty object
 PROMT user if they want to add, update, or display list
-SWITCH and input answer from above promt
+SWITCH and input answer from above prompt
   CASE 'add' run add function
   CASE 'update' run update function
   CASE 'delete' run delete function
